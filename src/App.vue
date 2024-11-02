@@ -2,7 +2,7 @@
   <main class="weather">
     <h1>Veðurspá</h1>
     <h2>Sláðu inn nafn á borg inn í textareitinn hér að neðan.</h2>
-    <form class="search_form">
+    <form class="search-form">
       <input type="button" value="My Location" class="my-location" />
       <input type="text" class="search_bar" />
       <select class="temp_unit">

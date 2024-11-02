@@ -11,8 +11,9 @@ app.mount("#app");
 function initMap() {
   const map_container = document.createElement("div");
   map_container.setAttribute("id", "map");
+map_container.classList.add("map");
 
-  document.querySelector("main").appendChild(map_container);
+	document.querySelector("main").appendChild(map_container);
 }
 
 function renderIntoContainer(element) {
@@ -73,7 +74,6 @@ function renderTable(data) {
   );
   table.classList.add("forecast");
 
-  const main = document.querySelector("main");
   renderIntoContainer(table);
 }
 
@@ -84,13 +84,13 @@ async function onMySearch(location) {
     const weather_data = await weatherSearch(crd.latitude, crd.longitude);
     renderTableHeading({
       name: "",
-      latitude: coords.latitude,
-      longitude: coords.longitude,
+      latitude: crd.latitude,
+      longitude: crd.longitude,
     });
     renderTable(weather_data);
 
     initMap();
-    createMap(coord.longitude, coords.latitude);
+    createMap(crd.longitude, crd.latitude);
   } catch (e) {
     renderError(e);
   }
