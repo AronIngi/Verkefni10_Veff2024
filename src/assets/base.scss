@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.hidden {
+  /* Viljum að þetta feli alltaf element, notum því !important */
+  display: none !important;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+
+  margin: var(--spacing) auto;
+  padding-inline: var(--spacing);
+  max-width: var(--max-width);
+}

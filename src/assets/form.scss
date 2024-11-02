@@ -1,0 +1,14 @@
+.search_form {
+  display: flex;
+  gap: 2rem;
+}
+
+input,
+textarea,
+button {
+  font-size: inherit;
+}
+
+button {
+  padding: 0.25rem 0.5rem;
+}
