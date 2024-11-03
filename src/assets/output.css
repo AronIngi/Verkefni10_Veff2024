@@ -89,7 +89,7 @@ button {
   text-align: center;
 }
 
-.forecast tbody tr:nth-child(2n+1) {
+.forecast tbody tr:nth-child(2n + 1) {
   background-color: var(--color-background-zebra);
 }
 

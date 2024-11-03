@@ -4,6 +4,7 @@ import { citySearch } from "./lib/city.js";
 import { weatherSearch } from "./lib/weather.js";
 import { el } from "./lib/elements.js";
 import { createMap } from "./lib/createMap.js";
+import { renderError, renderGeoError, renderLoading, renderTableHeading, renderTable} from "./lib/render.js"
 
 const app = createApp(App);
 app.mount("#app");
@@ -11,70 +12,9 @@ app.mount("#app");
 function initMap() {
   const map_container = document.createElement("div");
   map_container.setAttribute("id", "map");
-map_container.classList.add("map");
+  map_container.classList.add("map");
 
-	document.querySelector("main").appendChild(map_container);
-}
-
-function renderIntoContainer(element) {
-  if (document.querySelector(".forecast")) {
-    document
-      .querySelector("main")
-      .removeChild(document.querySelector(".forecast"));
-  }
-  if (document.querySelector("#map")) {
-    document.querySelector("main").removeChild(document.querySelector("#map"));
-  }
-  document.querySelector("main").appendChild(element);
-}
-
-function renderError(message) {
-  const heading = document.querySelector(".table-heading");
-  heading.innerHTML = message;
-}
-
-function renderGeoError(error) {
-  const heading = document.querySelector(".table-heading");
-  heading.innerHTML = `Error ${error.code}: ${error.message}`;
-}
-
-function renderLoading() {
-  const heading = document.querySelector(".table-heading");
-  heading.innerHTML = "Loading...";
-}
-
-function renderTableHeading(data) {
-  const text = `${data.name} ${data.latitude} ${data.longitude}`;
-
-  document.querySelector(".table-heading").innerHTML = text;
-}
-
-function renderTable(data) {
-  const table_body = el("tbody", {});
-  table_body.classList.add("forecast");
-
-  for (var i = 0; i < 24; i++) {
-    const row = el(
-      "tr",
-      {},
-      el("td", {}, `${data.hourly.time[i]}`),
-      el("td", {}, `${data.hourly.temperature[i]}`),
-      el("td", {}, `${data.hourly.precipitation[i]}`),
-    );
-    table_body.appendChild(row);
-  }
-
-  const table = el(
-    "table",
-    {},
-    el("th", {}, "Klukkutími"),
-    el("th", {}, `Hitastig (${data.units.temperature})`),
-    el("th", {}, `Úrkoma (${data.units.precipitation})`),
-    table_body,
-  );
-  table.classList.add("forecast");
-
-  renderIntoContainer(table);
+  document.querySelector("main").appendChild(map_container);
 }
 
 async function onMySearch(location) {
@@ -118,7 +58,7 @@ async function onSearch(location, units) {
   }
 }
 
-const search_form = document.querySelector(".search_form");
+const search_form = document.querySelector(".search-form");
 search_form.addEventListener("submit", (event) => {
   event.preventDefault();
   const city = document.querySelector(".search_bar").value;
