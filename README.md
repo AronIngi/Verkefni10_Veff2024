@@ -1,5 +1,7 @@
 # Verkefni10
 
+Þetta er veðurspáinn úr verkefni 9 fyrir utan að hægt er að leita að fleiri borgum og hægt er að velja hvaða mælieiningar eru notaðar. Svo bætti ég líka við korti neðst á síðunni
+
 ## Tól
 - Vite build framework
 - Vue web framework
