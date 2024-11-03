@@ -1,35 +1,20 @@
 # Verkefni10
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tól
+- Vite build framework
+- Vue web framework
+- eslinter fyrir javascript linting
+- stylelinter fyrir css linting
+- sass til að skipta css upp
+- prettier til að formatta kóða
+- Open Layers javascript library fyrir kort
+- concurrently til að keyra skipanir samhliða
 
-## Recommended IDE Setup
+## Notkun
+Vue notar Vite build frameworkið til að útbúa build og til að keyra dev server
+hægt er að nota npm run dev til að keyra development serverinn
+og npm run build til að búa til build af síðunni
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Í src möppuni er App.vue skrá sem inniheldur allt html fyrir main hluta síðunnar
+í main.js er notað fallið createApp sem settur html-ið í App.vue í DOM-ið á síðunni.
+í main.js er síðan sett event listener á ákveðna hluti á síðunni.
