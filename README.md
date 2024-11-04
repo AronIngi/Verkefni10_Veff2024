@@ -12,11 +12,11 @@
 - Open Layers javascript library fyrir kort
 - concurrently til að keyra skipanir samhliða
 
-## Notkun
-Vue notar Vite build frameworkið til að útbúa build og til að keyra dev server
-hægt er að nota npm run dev til að keyra development serverinn
-og npm run build til að búa til build af síðunni
+## Web API
+- Fetch API
+- Geolocation API
 
-Í src möppuni er App.vue skrá sem inniheldur allt html fyrir main hluta síðunnar
-í main.js er notað fallið createApp sem settur html-ið í App.vue í DOM-ið á síðunni.
-í main.js er síðan sett event listener á ákveðna hluti á síðunni.
+## Notkun
+Fetch er notað til að sækja gögn frá vefþjónustum
+
+Geolocation er notað til að ná í staðsettningu notanda. Virkar bara tækjum sem hafa GPS eins og t.d símum.
