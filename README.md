@@ -17,6 +17,6 @@
 - Geolocation API
 
 ## Notkun
-Fetch er notað til að sækja gögn frá vefþjónustum
+Fetch er notað til að sækja gögn frá vefþjónustum. sótt er frá openmeteo og geocoding vefþjónustunum.
 
 Geolocation er notað til að ná í staðsettningu notanda. Virkar bara tækjum sem hafa GPS eins og t.d símum.
